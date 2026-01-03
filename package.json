@@ -1,26 +1,62 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
+  "name": "aurum-launcher",
+  "version": "1.0.0",
+  "description": "Aurum Studios Game Launcher",
+  "main": "electron/main.js",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"wait-on http://localhost:3000 && electron .\"",
     "build": "next build",
+    "build:electron": "next build && electron-builder",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "electron": "electron .",
+    "electron:dev": "concurrently \"next dev\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "build": {
+    "appId": "com.aurumstudios.launcher",
+    "productName": "Aurum Launcher",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": ["nsis"]
+    },
+    "files": [
+      "electron/**/*",
+      "out/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "out",
+        "to": "out",
+        "filter": ["**/*"]
+      }
+    ]
   },
   "dependencies": {
+    "better-sqlite3": "^11.8.1",
     "next": "16.0.7",
     "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react-dom": "19.2.1",
+    "uuid": "^11.0.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.12",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/uuid": "^10.0.0",
+    "concurrently": "^9.1.2",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wait-on": "^8.0.1"
   }
 }

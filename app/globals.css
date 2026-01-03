@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0f;
+  --foreground: #e8eaed;
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --secondary: #06b6d4;
+  --accent: #f59e0b;
+  --card-bg: #1a1a24;
+  --border: #2a2a3a;
 }
 
 @theme inline {
@@ -12,15 +18,85 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.futuristic-glow {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.futuristic-glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.game-card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  border-color: var(--primary);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.5);
+}
+
+.btn-secondary {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.input-field {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }

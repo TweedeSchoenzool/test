@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Cyber Strike 2077",
+    "description": "A futuristic first-person shooter set in a dystopian cyberpunk world. Fight through neon-lit streets and hack your way to victory.",
+    "image": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=300&fit=crop",
+    "price": "$39.99"
+  },
+  {
+    "title": "Fantasy Quest: Legends",
+    "description": "Embark on an epic RPG adventure through magical lands. Battle monsters, collect loot, and become a legendary hero.",
+    "image": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=400&h=300&fit=crop",
+    "price": "$29.99"
+  },
+  {
+    "title": "Space Odyssey",
+    "description": "Explore the vast universe in this space exploration game. Build your fleet, discover new planets, and conquer the stars.",
+    "image": "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400&h=300&fit=crop",
+    "price": "$49.99"
+  },
+  {
+    "title": "Racing Legends",
+    "description": "High-octane racing action with realistic physics and stunning graphics. Compete in championships around the world.",
+    "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=400&h=300&fit=crop",
+    "price": "$24.99"
+  },
+  {
+    "title": "Puzzle Master",
+    "description": "Challenge your mind with hundreds of unique puzzles. Perfect for casual gaming sessions with increasing difficulty.",
+    "image": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=400&h=300&fit=crop",
+    "price": "$14.99"
+  },
+  {
+    "title": "Survival Island",
+    "description": "Stranded on a mysterious island, you must gather resources, craft tools, and survive against all odds.",
+    "image": "https://images.unsplash.com/photo-1589241062272-c0a000072dfa?w=400&h=300&fit=crop",
+    "price": "$34.99"
+  }
+]

@@ -12,7 +12,16 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "electron/**",
+    "dist/**",
   ]),
+  {
+    rules: {
+      "@next/next/no-img-element": "off",
+      "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/set-state-in-effect": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;
